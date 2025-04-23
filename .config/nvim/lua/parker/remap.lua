@@ -6,3 +6,8 @@ vim.keymap.set("n", "<leader>k", vim.cmd.tabnext)
 vim.keymap.set("n", "<leader><S-j>", ":tabmove -1<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader><S-k>", ":tabmove +1<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>PV", ":tabnew .<CR>", { noremap = true, silent = true })
+
+-- LSP Remaps
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
