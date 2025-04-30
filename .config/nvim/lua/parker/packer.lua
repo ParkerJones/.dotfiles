@@ -5,23 +5,27 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+	use 'wbthomason/packer.nvim'
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use 'rebelot/kanagawa.nvim'
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use 'rebelot/kanagawa.nvim'
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 
-  -- LSPs
-  use {
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
-	'neovim/nvim-lspconfig',
-  }
+	-- LSPs
+	use {
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
+		'neovim/nvim-lspconfig',
+	}
 
-  -- Autocomplete and Snippets
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
-  use 'saadparwaiz1/cmp_luasnip'
+	-- Autocomplete and Snippets
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'L3MON4D3/LuaSnip'
+	use 'rafamadriz/friendly-snippets'
+	use 'saadparwaiz1/cmp_luasnip'
 
 end)
