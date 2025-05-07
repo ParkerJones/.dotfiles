@@ -16,16 +16,20 @@ return require('packer').startup(function(use)
 
 	-- LSPs
 	use {
-		'williamboman/mason.nvim',
+		'williamboman/mason.nvim',				-- LSP Installer
 		'williamboman/mason-lspconfig.nvim',
 		'neovim/nvim-lspconfig',
 	}
 
 	-- Autocomplete and Snippets
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/nvim-cmp' 				-- Autocomplete
+	use 'hrsh7th/cmp-nvim-lsp'			-- LSP Integration for Autocomplete
 	use 'L3MON4D3/LuaSnip'
-	use 'rafamadriz/friendly-snippets'
+	use 'rafamadriz/friendly-snippets'	-- Snippet Pack
 	use 'saadparwaiz1/cmp_luasnip'
+	use {
+		'kkoomen/vim-doge', 			-- (Do)cument (Ge)nerator
+		run = ':call doge#install()'
+	}
 
 end)
