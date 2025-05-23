@@ -5,7 +5,6 @@ echo "This will remove existing dot files/directories and create new symlinks:"
 
 # List files to be replaced
 echo "~/.gitconfig"
-echo "~/.oh-my-zsh"
 echo "~/.config/nvim"
 echo "~/.config/i3"
 
@@ -16,13 +15,11 @@ if [[ "$confirm" =~ ^[Yy]$ ]]; then
 
 	# Remove files
 	[ -e ~/.gitconfig ] && rm -rf ~/.gitconfig
-	[ -e ~/.oh-my-zsh ] && rm -rf ~/.oh-my-zsh
 	[ -e ~/.config/nvim ] && rm -rf ~/.config/nvim
 	[ -e ~/.config/i3 ] && rm -rf ~/.config/i3
 
 	# Create symlinks
 	ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-	ln -s ~/.dotfiles/.oh-my-zsh ~/.oh-my-zsh
 	ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 	ln -s ~/.dotfiles/.config/i3 ~/.config/i3
 
