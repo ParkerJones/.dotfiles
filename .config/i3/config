@@ -190,13 +190,14 @@ bar {
 }
 exec --no-startup-id compton
 
-# Assign startup work
+# Assign app workspaces
 assign [title="editor"] 1
 assign [title="console"] 1
 assign [class="Brave-browser"] 2
 assign [title="terminal"] 3
 assign [title="notes"] 4
 
+# Launch startup apps
 exec --no-startup-id i3-msg "workspace 1; exec gnome-terminal --title=editor"
 exec --no-startup-id i3-msg "workspace 1; exec gnome-terminal --title=console"
 exec --no-startup-id i3-msg "workspace 2; exec brave-browser --title=browser"
