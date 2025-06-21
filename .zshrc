@@ -106,7 +106,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Add ssh key(s)
 eval `ssh-agent -s`
-ssh-add .ssh/parkey
+ssh-add .ssh/github_parker-laptop
+ssh-add .ssh/parkey-db.pem
 clear
 
 # Add aliases
